@@ -28,6 +28,11 @@ class SearchableMovieReviewsContainer extends Components {
   render() {
     return (
       <div className="searchable-movie-reviews">
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" name="search" onChange={this.handleSearchIp}/>
+        <button>Search</button>
+      </form>
+      <MovieReviews search={this.state.searchR}/>
       </div>
     )
   }
