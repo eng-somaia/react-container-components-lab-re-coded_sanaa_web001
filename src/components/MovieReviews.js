@@ -1,14 +1,35 @@
 import React from 'react';
 
+const Review = ({
+  headline,
+  byline,
+  link,
+  summary_short
+}) => {
+  return (
+
+    <div
+      key={headline}
+      className="review"
+    >
+      <header>
+        <a
+          className="review-link"
+          href={link.url}
+        >
+          {headline}
+        </a>
+        <br/>
+        <span className="author">{byline}</span>
+      </header>
+      <blockquote>{summary_short}</blockquote>
+    </div>
+  );
+};
 const MovieReviews = (props) => {
   return {
-    <div>
-    <ul className="review-list">
-    props.review.forEach(obj =>{
-      <li className="review">obj.display_title</li>
-    })
-
-    </ul>
+    <div className="review-list">
+    {props.review.map(Review)}
     </div>
   }
 }
