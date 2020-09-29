@@ -33,6 +33,7 @@ const MovieReviews = (props) => {
     </div>
   }
 }
+
 MovieReviews.defaultProps = {
   reviews: []
 };
