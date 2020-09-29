@@ -30,7 +30,7 @@ class SearchableMovieReviewsContainer extends Component {
         <input type="text" name="search" onChange={this.handleSearchIp}/>
         <buttontype="submit">Search</button>
       </form>
-      <MovieReviews review={this.state.searchR}/>
+      <MovieReviews reviews={this.state.reviews}/>
       </div>
     )
   }
