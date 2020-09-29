@@ -11,7 +11,7 @@ class LatestMovieReviewsContainer extends Component {
   constructor(){
     super();
     this.state = {
-      latestM: []
+      reviews: []
     }
   }
   componentDidMount() {
@@ -19,14 +19,14 @@ class LatestMovieReviewsContainer extends Component {
         .then(response => response.json())
         .then(data => {
           this.setState({
-            latestM: data.results
+            reviews: data.results
           })
         })
     }
   render() {
     return (
       <div className="latest-movie-reviews">
-      <MovieReviews review={this.state.latestM}/>
+      <MovieReviews review={this.state.reviews}/>
       </div>
     );
   }
