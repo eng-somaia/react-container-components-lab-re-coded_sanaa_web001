@@ -8,12 +8,10 @@ const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json?'
 
 // Code SearchableMovieReviewsContainer Here
 class SearchableMovieReviewsContainer extends Component {
-  constructor(){
     this.state = {
       searchT: '',
       searchR: []
     }
-  }
   handleSearchIp = event =>
     this.setState({ searchT: event.target.value });
 
@@ -30,7 +28,7 @@ class SearchableMovieReviewsContainer extends Component {
       <div className="searchable-movie-reviews">
       <form onSubmit={this.handleSubmit}>
         <input type="text" name="search" onChange={this.handleSearchIp}/>
-        <button>Search</button>
+        <buttontype="submit">Search</button>
       </form>
       <MovieReviews review={this.state.searchR}/>
       </div>
