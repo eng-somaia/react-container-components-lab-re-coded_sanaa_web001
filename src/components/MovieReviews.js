@@ -4,7 +4,7 @@ const MovieReviews = (props) => {
   return {
     <div>
     <ul className="review-list">
-    props.result.forEach(obj =>{
+    props.review.forEach(obj =>{
       <li className="review">obj.display_title</li>
     })
 
@@ -12,4 +12,7 @@ const MovieReviews = (props) => {
     </div>
   }
 }
+MovieReviews.defaultProps = {
+  reviews: []
+};
 export default MovieReviews;
