@@ -18,14 +18,14 @@ class LatestMovieReviewsContainer extends Components {
         .then(response => response.json())
         .then(data => {
           this.setState({
-            latestM: data.result
+            latestM: data.results
           })
         })
     }
   render() {
     return (
       <div className="latest-movie-reviews">
-      <MovieReviews latest={this.state.result}
+      <MovieReviews latest={this.state.latestM}
       </div>
     )
   }
