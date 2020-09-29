@@ -18,7 +18,7 @@ class SearchableMovieReviewsContainer extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    fetch(BASE_URL.concat(this.state.searchT))
+    fetch(BASE_URL.concat(this.state.reviews))
       .then(res => res.json())
       .then(res => this.setState({ reviews: res.results }));
   };
