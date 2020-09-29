@@ -9,6 +9,7 @@ const URL = 'https://api.nytimes.com/svc/movies/v2/reviews/all.json?'
 // Code LatestMovieReviewsContainer Here
 class LatestMovieReviewsContainer extends Component {
   constructor(){
+    super();
     this.state = {
       latestM: [];
     }
@@ -27,7 +28,7 @@ class LatestMovieReviewsContainer extends Component {
       <div className="latest-movie-reviews">
       <MovieReviews review={this.state.latestM}
       </div>
-    )
+    );
   }
 }
 export default LatestMovieReviewsContainer;
