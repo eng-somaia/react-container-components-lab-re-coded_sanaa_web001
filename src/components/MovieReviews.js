@@ -29,7 +29,7 @@ const Review = ({
 const MovieReviews = (props) => {
   return (
     <div className="review-list">
-    {props.review.map(Review)}
+    {props.reviews.map(Review)}
     </div>
   )
 }
